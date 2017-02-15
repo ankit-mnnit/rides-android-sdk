@@ -10,17 +10,17 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.1.0'
+        classpath 'com.android.tools.build:gradle:2.2.3'
     }
 }
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "com.uber.sdk.android.rides.samples"
-        minSdkVersion 14
-        targetSdkVersion 23
+        minSdkVersion 16
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
         buildConfigField "String", "CLIENT_ID", "\"${loadSecret("UBER_CLIENT_ID")}\"" //Add your client id to gradle.properties
@@ -37,7 +37,7 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.android.support:appcompat-v7:25.1.1'
     compile project(':rides-android')
     compile project(':core-android')
 }
